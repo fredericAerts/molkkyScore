@@ -1,0 +1,72 @@
+.secondaryFontloader{
+	font-family: $regularFontFamily;
+	position: absolute;
+	left: -9999px; 
+	width: 1px; 
+	height: 1px;
+}
+
+.loader-container {
+	display: none;
+	position:absolute;
+	top:40%;
+	width:100%;
+  	background:$darkColor;
+  	text-align: center;
+	margin: 1em auto;
+	color: $lightColor;
+	.loading-title {
+	  display: block;
+	  margin: 0 auto
+	}
+
+	.dot {
+		height: 10px; 
+	  	width: 10px;
+		background: $accentColor;
+		display: inline-block;
+		margin: 12px 2px;
+		border-radius: 100%;
+		-webkit-animation:loader 3s cubic-bezier(0.030, 0.615, 0.995, 0.415) infinite both;
+	    -moz-animation:loader 3s cubic-bezier(0.030, 0.615, 0.995, 0.415) infinite both;
+	    -o-animation:loader 3s cubic-bezier(0.030, 0.615, 0.995, 0.415) infinite both;
+	     animation:loader 3s cubic-bezier(0.030, 0.615, 0.995, 0.415) infinite both;
+	}
+
+	.dot-1 {@include animation-delay(1s);}
+	.dot-2 {@include animation-delay(0.8s)}
+	.dot-3 {@include animation-delay(0.6s)}
+	.dot-4 {@include animation-delay(0.4s)}
+	.dot-5 {@include animation-delay(0.2s)}
+	.dot-6 {@include animation-delay(0)}
+}
+
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: translateX(-40px); opacity: 0;
+	}
+	25% {opacity: 1}
+	50% {
+		-webkit-transform: translateX(40px); opacity: 0;
+	}
+	100% {opacity: 0}
+}
+@-moz-keyframes loader {
+	0% {-moz-transform: translateX(-40px); opacity: 0}
+	25% {opacity: 1}
+	50% {-moz-transform: translateX(40px); opacity: 0}
+	100% {opacity: 0}
+}
+@-o-keyframes loader {
+	0% {-o-transform: translateX(-40px); opacity: 0}
+	25% {opacity: 1}
+	50% {-o-transform: translateX(40px); opacity: 0}
+	100% {opacity: 0}
+}
+@keyframes loader {
+	0% {transform: translateX(-40px); opacity: 0}
+	25% {opacity: 1}
+	50% {transform: translateX(40px); opacity: 0}
+	100% {opacity: 0}
+}
+

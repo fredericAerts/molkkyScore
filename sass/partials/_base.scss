@@ -1,0 +1,73 @@
+/* .ttf is best choice for offline apps  */ 
+@font-face {
+    font-family: 'Champion-medium';
+    src: local('Champion-medium'),
+         url('../../fonts/nationalchampion-medium-webfont.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Champion-regular';
+    src: local('Champion-regular'),
+         url('../../fonts/nationalchampion-regular-webfont.ttf') format('truetype');
+}
+
+$mediumFontFamily:'Champion-medium',"Arial Black", Gadget, sans-serif;
+$regularFontFamily:'Champion-regular', Arial, Helvetica, sans-serif;
+/* $boldFontFamily:'Champion-bold',serif; */
+$bigFont:40px;
+$mediumFont:30px;
+$mediumSmallFont:25px;
+$smallFont:20px;
+$smallerFont:14px;
+$smallestFont:12px;
+$extra-smallFont:10px;
+
+//colors
+$darkColor:#2E2E2E;
+$lightColor:#FFFFFF;
+$greyColor:#E6E6E6;
+$alertColor:#E60000;
+$accentColor:#1275B3;
+/* $accentColor-light:#1275B3; */
+
+/*mixins*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-top-radius($radius){
+  -webkit-border-radius: $radius $radius 0px 0px;
+  -moz-border-radius: $radius $radius 0px 0px;
+  -ms-border-radius: $radius $radius 0px 0px;
+  -o-border-radius: $radius $radius 0px 0px;
+  border-radius: $radius $radius 0px 0px;
+}
+
+@mixin animation-delay($delay) {
+  -webkit-animation-delay:$delay;
+   -moz-animation-delay:$delay;
+    -ms-animation-delay:$delay;
+     -o-animation-delay:$delay;
+        animation-delay:$delay;
+}
+
+@mixin user-select-none(){
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@mixin font-family-bold(){
+  font-family:$mediumFontFamily;
+  
+}
+
+@mixin font-family-regular(){
+  font-family:$regularFontFamily;
+  font-weight: normal;
+}

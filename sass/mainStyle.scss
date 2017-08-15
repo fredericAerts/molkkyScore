@@ -1,0 +1,24 @@
+@import "partials/base";
+@import "vendor/fontello";
+@import "vendor/bootstrap";
+@import "vendor/reset";
+@import "partials/general/loader";
+@import "partials/general/modals";
+@import "partials/gameboard/base";
+@import "partials/gameboard/scoreTable";
+@import "partials/gameboard/tutorial";
+@import "partials/modals/start";
+@import "partials/modals/addPlayers";
+@import "partials/modals/gameSettings";
+@import "partials/modals/about";
+@import "partials/modals/tutorialIntro";
+@import "partials/modals/scoreboard";
+@import "partials/animations";
+
+body{
+	font-family:$mediumFontFamily;
+	background-color:$darkColor;
+	color:$darkColor;
+}
+
+

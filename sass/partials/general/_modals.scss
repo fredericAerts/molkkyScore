@@ -1,0 +1,61 @@
+.modal {
+	font-family:$regularFontFamily;
+	overflow-y:auto;
+
+	.modal-content{
+		@include border-radius(6px);
+	}
+	.modal-header{
+		margin-bottom:15px;
+		color:$lightColor;
+		background-color:$darkColor;
+		border:1px solid $lightColor;
+		border-bottom:none;
+		@include border-top-radius(5px);
+	}
+	.modal-body{
+		line-height:1.3;
+	}
+	.modal-footer{
+		border-top:none;
+	}
+	.list-group{
+		margin:0px;
+	}
+	button.close{
+		opacity:1;
+		font-size:inherit;
+		color:$alertColor;
+		& span:first-child{
+			position: relative;
+			z-index: 999;
+		}
+	}
+	.btn-primary{
+		background-color: $accentColor;
+		border-color:$accentColor;
+	}
+	.btn-default{
+		font-family:$mediumFontFamily;
+		background-color: $lightColor;
+		border-color:$darkColor;
+	}
+	.btn-cancel{
+		border:0px;
+		padding-left:0px;
+		font-family:$regularFontFamily;
+		color:$accentColor;
+	}
+	.btn-icon-only{
+		border:none;
+		outline:thin dotted;
+		outline-offset: -2px;
+	}
+	.list-group-item{
+		border-color:$lightColor;
+		@include border-radius(6px);
+	}
+	strong{
+		font-family: $mediumFontFamily;
+	}
+}

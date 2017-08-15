@@ -1,0 +1,73 @@
+#scoreTable{
+	table-layout: fixed;
+	font-family:$regularFontFamily;
+	font-size: $smallerFont;
+	height:100%;
+	width:100%;
+	border-collapse: separate;
+	border-spacing:1px;
+	&:hover{
+		cursor:pointer;
+	}
+	.score-table-item{
+		border:2px solid $darkColor;
+		& p.score{
+			border-left:1px solid $lightColor;
+			&.first{
+				border-left:0px;
+			}
+		}
+		& p.misses{
+			position:absolute;
+			width:100%;
+			bottom:3px;
+			font-size:$extra-smallFont;
+			line-height: $extra-smallFont;
+			color:$alertColor;
+		}
+		& p.playerName{
+			display: none;
+			position:absolute;
+			width:100%;
+			top:0px;
+			font-size:$extra-smallFont;
+			line-height: $extra-smallFont;
+			padding:3px;
+			text-overflow:ellipsis;
+			overflow:hidden;
+			white-space: nowrap;
+		}
+		&.active{
+			border-color:$accentColor;
+			& + .score-table-item p.score, .score-table-item p.score + &, p.score{
+				border:0px;
+			}
+		}
+		&.disqualified .score{
+			color:$alertColor;
+		}
+	}
+}
+
+@media (min-width:768px) {
+	#scoreTable{
+		font-size: $bigFont;
+		.score-table-item{
+			border:5px solid $darkColor;
+			& p.misses{
+				bottom: 5px;
+				font-size:$smallerFont;
+				line-height: $smallerFont;
+			}
+		}
+	}
+}
+@media (min-width:1224px) {
+	#scoreTable{
+		.score-table-item{
+			& p.playerName{
+				display:block;
+			}
+		}
+	}
+}

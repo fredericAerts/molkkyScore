@@ -1,0 +1,11 @@
+# dist #
+######################
+web/*
+
+# cache files #
+######################
+.sass-cache
+
+# OS generated files #
+######################
+.DS_Store
